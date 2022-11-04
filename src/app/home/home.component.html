@@ -1,0 +1,22 @@
+<h1 class="text-center my-5">Welcome To Our Store</h1>
+<div class="header">
+</div>
+<div class="container">
+    <h2 class="text-center my-5">Our Products</h2>
+    <div class="row" *ngIf="!loading">
+        <div *ngFor="let item of products" class="col-md-4 col-sm-12">
+
+            <!-- card Component -->
+
+            <app-card-view [data]="item"></app-card-view>
+
+        </div>
+
+    </div>
+    <div class="text-center w-100" *ngIf="loading">
+
+        <!-- spinner-lodaing Component -->
+        <app-loading></app-loading>
+
+    </div>
+</div>

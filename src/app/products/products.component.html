@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="box">
+
+        <div class="d-flex justify-content-center">
+
+            <!-- select-category Component -->
+
+            <app-select class="mb-5" [data]="categories" [title]="'Categories'" (selectedValue)="filterCategory($event)">
+            </app-select>
+
+        </div>
+
+        <div class="row" *ngIf="!loading">
+            <div *ngFor="let item of products | paginate: { itemsPerPage: 9, currentPage: p }" class="col-md-4 col-sm-12">
+
+                <!-- card Component -->
+
+                <app-card-view [data]="item"></app-card-view>
+
+
+            </div>
+            <pagination-controls class="text-center my-5" (pageChange)="p = $event"></pagination-controls>
+
+
+        </div>
+        <div class="text-center w-100" *ngIf="loading">
+
+            <!-- spinner-lodaing Component -->
+            <app-loading></app-loading>
+
+        </div>
+    </div>
+</div>
