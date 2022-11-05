@@ -10,10 +10,11 @@ import { CardViewComponent } from './card-view/card-view.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { NavComponent } from './nav/nav.component';
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { SelectComponent } from './select/select.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+
 
 
 

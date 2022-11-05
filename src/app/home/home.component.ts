@@ -14,14 +14,14 @@ export class HomeComponent implements OnInit {
   constructor(private _ProductsService:ProductsService) { }
 
   ngOnInit(): void {
-    this.getAllProducts();
+    this.getHomeProducts();
   }
 
-  getAllProducts(){
+  getHomeProducts(){
     this.loading = true;
-    this._ProductsService.getAllProducts().subscribe({
+    this._ProductsService.getHomeProducts(6,0).subscribe({
       next:(res)=>{
-        this.products = res.products.splice(0,6);
+        this.products = res.products;
         this.loading = false;
       }, error:(err)=>{
         this.loading = false;

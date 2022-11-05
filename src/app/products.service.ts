@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 HttpClient
 @Injectable({
@@ -10,8 +10,16 @@ export class ProductsService {
 
   constructor(private _HttpClient:HttpClient) { }
 
+  getProducts():Observable<any>{
+    return this._HttpClient.get(`https://dummyjson.com/products`)
+  }
+
   getAllProducts():Observable<any>{
     return this._HttpClient.get(`https://dummyjson.com/products`)
+  }
+
+  getHomeProducts(limit:number, skip:number):Observable<any>{
+    return this._HttpClient.get(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`)
   }
 
   getAllCategories():Observable<any>{
@@ -24,5 +32,16 @@ export class ProductsService {
 
   getProductById(id:any):Observable<any>{
     return this._HttpClient.get(`https://dummyjson.com/products/${id}`)
+  }
+
+  deleteProduct(id:any):Observable<any>{
+    return this._HttpClient.delete(`https://dummyjson.com/products/${id}`)
+  }
+
+  addProduct(add:any):Observable<any>{
+    return this._HttpClient.post(`https://dummyjson.com/products/add`, add)
+  }
+  updateProduct(id:any ,item:any):Observable<any>{
+    return this._HttpClient.put(`https://dummyjson.com/products/${id}`, item).pipe(map(obj => obj))
   }
 }

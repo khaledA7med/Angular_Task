@@ -12,14 +12,15 @@ export class ProductsComponent implements OnInit {
   products:any[] = [];
   categories:any[] = [];
   loading:boolean = false;
-  p: any = 1;
+  p:any = 1;
 
 
-  constructor(private _ProductsService:ProductsService) { }
+  constructor(private _ProductsService:ProductsService) { 
+  }
 
   ngOnInit(): void {
-    this.getAllProducts();
     this.getAllCategories();
+    this.getAllProducts();
   }
 
   getAllProducts(){
@@ -62,6 +63,5 @@ export class ProductsComponent implements OnInit {
       }
     })
   }
-
 
 }

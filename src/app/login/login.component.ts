@@ -16,10 +16,8 @@ export class LoginComponent implements OnInit {
   constructor(private _AuthService:AuthService, private _Router:Router) { }
 
   loginForm(loginform:any){
-    console.log(loginform.value);
     this._AuthService.login(loginform.value).subscribe({
       next:(res) =>{
-        console.log(res);
         if(res){
           this._Router.navigate(['home']);
           localStorage.setItem('token',res.token);

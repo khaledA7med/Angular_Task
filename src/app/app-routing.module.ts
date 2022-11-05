@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'home', canActivate:[AuthGuard], component:HomeComponent},
   {path:'products', canActivate:[AuthGuard], component:ProductsComponent},
   {path:'product details/:id', canActivate:[AuthGuard], component:ProductDetailsComponent},
+  {path:'form',canActivate:[AuthGuard] ,loadChildren:()=> import('./product/product.module').then(m => m.ProductModule)},
   {path:'**',redirectTo:'home', pathMatch:'full'}
 ];
 

@@ -16,17 +16,8 @@
             </ul>
 
             <ul class="list-unstyled d-flex">
-                <li class="nav-item mx-2">
-                    <a class="nav-link"><i class="fa-brands fa-facebook"></i></a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link"><i class="fa-brands fa-spotify"></i></a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link"><i class="fa-brands fa-instagram"></i></a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link"><i class="fa-brands fa-youtube"></i></a>
+                <li *ngIf="isLogin" class="nav-item mx-5">
+                    <a class="nav-link" routerLink="form" routerLinkActive="active">Form</a>
                 </li>
                 <li *ngIf="isLogin" class="nav-item mx-4">
                     <button (click)="logOut()" class="nav-link btn btn-outline-info" routerLink="login"

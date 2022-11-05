@@ -9,7 +9,40 @@
         </div>
     </div>
 
-    <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
+    <div class="mb-2 d-flex justify-content-between">
         <span>{{data.price}} $</span>
+        <div class="d-flex justify-content-end mx-3 mb-3">
+            <button class="btn btn-info mx-3" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop2" (click)="updateProduct(data)">Edit</button>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel2">Update Product
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label for="">Title :</label>
+                                <input class="form-control" placeholder="" [(ngModel)]="data.title" name="name">
+
+                                <label for="">Price</label>
+                                <input class="form-control" placeholder="" [(ngModel)]="data.price" name="price">
+                            </form>
+                        
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)= success()>Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------->
+            <button class="btn btn-danger" (click)="deleteProduct(data)">Delete</button>
+        </div>
     </div>
 </div>

@@ -5,7 +5,8 @@
 
             <!-- select-category Component -->
 
-            <app-select class="mb-5" [data]="categories" [title]="'Categories'" (selectedValue)="filterCategory($event)">
+            <app-select class="mb-5" [data]="categories" [title]="'Categories'"
+                (selectedValue)="filterCategory($event)">
             </app-select>
 
         </div>
@@ -19,6 +20,7 @@
 
 
             </div>
+
             <pagination-controls class="text-center my-5" (pageChange)="p = $event"></pagination-controls>
 
 
