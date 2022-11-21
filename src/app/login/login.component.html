@@ -4,7 +4,11 @@
             <h1>Login</h1>
         </div>
         <div *ngIf="errors" class="alert alert-danger my-3">{{errors}}</div>
-        <form class="my-3" #loginform="ngForm" (ngSubmit)="loginForm(loginform)">
+        <form #loginform="ngForm" (ngSubmit)="loginForm(loginform)">
+            <div class="container">
+                <p>username: kminchelle</p>
+                <P>password: 0lelplR</P>
+            </div>
             <div class="my-5 px-5">
                 <label for="username" class="form-label">Username</label>
                 <input ngModel #username="ngModel" class="form-control" type="username" name="username" required minlength="8" maxlength="16">
@@ -24,8 +28,6 @@
                 <p class="text text-danger my-1" *ngIf="password.errors?.['minlength, maxlength'] && password.touched">*
                     Password must be between 6 - 15 characters</p>
             </div>
-            <p>username: kminchelle</p>
-            <P>password: 0lelplR</P>
             <div class="text-center mb-5">
                 <button class="btn btn-outline-info" [disabled]="loginform.invalid" type="submit">Login</button>
             </div>
