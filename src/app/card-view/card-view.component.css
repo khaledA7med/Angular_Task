@@ -1,7 +1,7 @@
 .item{
     width: 100%;
-    /* background-color: #ddd; */
-    text-decoration: none;
+    /*background-color: #ddd;
+    */text-decoration: none;
     text-align: center;
     margin: 15px;
     display: inline-block;
@@ -16,12 +16,19 @@
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    position: relative;
 }
 .item:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     cursor: pointer;
+    background-color: rgba(48, 186, 231, 0.459);
 }
 .item img{
-    margin-top: 10px;
+    margin-top: 60px;
     width: 70%;
     height: 200px;
     border-radius: 20px;
@@ -39,7 +46,7 @@
     overflow: hidden;
     font-size: 16px;
     padding: 5px 15px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
 }
 .item .item-body h4{
     height: 50px;
@@ -51,7 +58,7 @@
 }
 .item span{
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 10px;
     padding: 3px 7px;
     border-radius: 30px;
@@ -59,4 +66,25 @@
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+}
+.price{
+    margin-right: 10px;
+    background-color: dodgerblue;
+}
+.brand{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: dodgerblue;
+    font-size: 15px;
+}
+.rate{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: dodgerblue;
+    font-size: 15px;
+}
+.rate i{
+    color: gold;
 }

@@ -14,6 +14,7 @@ import { FormsModule} from '@angular/forms';
 import { SelectComponent } from './select/select.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -28,7 +29,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ProductDetailsComponent,
     NavComponent,
     SelectComponent,
-    LoadingComponent
+    LoadingComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

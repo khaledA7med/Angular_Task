@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   id: string = '';
   data:any = {};
   loading:boolean = false;
+  image: any = {};
   constructor(private _ProductsService:ProductsService, private _ActivatedRoute:ActivatedRoute) {
    }
 

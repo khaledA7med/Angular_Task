@@ -29,6 +29,10 @@
                                     <label for="" class="form-label">Price</label>
                                     <input type="number" formControlName="price" class="form-control" id="price">
                                 </div>
+                                <div class="col-md-8">
+                                    <label for="" class="form-label">Image</label>
+                                    <input type="file" formControlName="image" class="form-control" id="image">
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -48,7 +52,7 @@
                     <th>image</th>
                     <th>Name</th>
                     <th>brand</th>
-                    <th style="width: 25%;">price</th>
+                    <th>price</th>
                     <th></th>
                 </tr>
             </thead>
@@ -62,6 +66,7 @@
                     <td>
                         <button class="btn btn-info mx-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                         (click)="updateProduct(item)">Edit</button>
+
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -75,11 +80,11 @@
                                 </div>
                                 <div class="modal-body">
                                     <form>
-                                        <label for="">Title :</label>
-                                        <input class="form-control" placeholder="" [(ngModel)]="item.title" name="name">
+                                        <label class="text-dark" for="">Name</label>
+                                        <input class="form-control my-2" placeholder="" [(ngModel)]="item.title" name="name">
 
-                                        <label for="">Price</label>
-                                        <input class="form-control" placeholder="" [(ngModel)]="item.price"
+                                        <label class="text-dark" for="">Price</label>
+                                        <input class="form-control my-2" placeholder="" [(ngModel)]="item.price"
                                             name="price">
                                     </form>
 
@@ -93,12 +98,12 @@
                         </div>
                     </div>
                     </td>
+                    <td><button class="btn btn-danger" (click)="deleteProduct(item)">Delete</button></td>
                 </tr>
             </tbody>
 
-            <pagination-controls class="text-center my-5" (pageChange)="p = $event"></pagination-controls>
-
         </table>
+        <pagination-controls class="text-center my-5" (pageChange)="p = $event"></pagination-controls>
 
     </div>
 </div>

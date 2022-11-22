@@ -23,7 +23,8 @@ export class ProductComponent implements OnInit {
     this.form = this._FormBuilder.group({
       title: ['', [Validators.required]],
       brand: ['', [Validators.required]],
-      price: ['', [Validators.required]]
+      price: ['', [Validators.required]],
+      image: ['', [Validators.required]]
     })
     this.getAllProducts();
   }
@@ -55,6 +56,13 @@ export class ProductComponent implements OnInit {
       },
       error:(err)=>{
         console.log(err);
+      }
+    })
+  }
+  deleteProduct(item:any){
+    this._ProductsService.deleteProduct(item.id).subscribe({
+      next: ()=>{
+        alert('product'+ '( ' + item.title + ' )' +'deleted !');
       }
     })
   }

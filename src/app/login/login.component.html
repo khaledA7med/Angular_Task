@@ -11,7 +11,8 @@
             </div>
             <div class="my-5 px-5">
                 <label for="username" class="form-label">Username</label>
-                <input ngModel #username="ngModel" class="form-control" type="username" name="username" required minlength="8" maxlength="16">
+                <input ngModel #username="ngModel" class="form-control" type="username" name="username" required
+                    minlength="8" maxlength="16">
                 <p class="text text-danger my-1" *ngIf="username.errors?.['required'] && username.touched">* username is
                     required
                 </p>
