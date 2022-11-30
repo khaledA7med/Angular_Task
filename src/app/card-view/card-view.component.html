@@ -13,5 +13,11 @@
         <span class="text-decoration-line-through text-danger">{{data.price}} $</span>
         <span class="price">{{ data.price - (data.price * data.discountPercentage / 100) | number:'1.1-1'}} $</span>
     </div>
-    <button class="btn btn-outline-info my-3">Add to cart</button>
+
+    <button class="btn btn-outline-info my-3" *ngIf="!addButton" (click)="addButton = true">Add to cart</button>
+    <div class="px-3 w-50 mb-2 d-flex justify-content-center align-items-center" *ngIf="addButton">
+        <input type="number" class="form-control" [(ngModel)]="amount">
+        <button class="btn btn-outline-info mx-1" (click)="add(); addButton = false;">Add</button>
+    </div>
+
 </div>

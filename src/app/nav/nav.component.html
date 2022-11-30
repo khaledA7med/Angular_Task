@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-color">
     <div class="container d-flex">
-        <a class="navbar-brand" routerLink="home">Store</a>
+        <a class="navbar-brand mx-5" routerLink="home"> Store <i class='bx bxl-shopify'></i> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,24 +8,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li *ngIf="isLogin" class="nav-item">
-                    <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+                    <a class="nav-link" routerLink="home" routerLinkActive="active"> <i class='bx bxs-home-alt-2' ></i> Home</a>
                 </li>
                 <li *ngIf="isLogin" class="nav-item">
-                    <a class="nav-link" routerLink="products" routerLinkActive="active">Product List</a>
+                    <a class="nav-link" routerLink="products" routerLinkActive="active"> <i class='bx bxs-collection'></i> Product List</a>
                 </li>
             </ul>
 
             <ul class="list-unstyled d-flex">
-                <li *ngIf="isLogin" class="nav-item mx-5">
-                    <a class="nav-link" routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+                <li *ngIf="isLogin" class="nav-item mx-5 p-1">
+                    <a class="nav-link" routerLink="dashboard" routerLinkActive="active"> <i class='bx bxs-dashboard p-1' ></i> Dashboard</a>
                 </li>
-                <li *ngIf="isLogin" class="nav-item mx-4">
-                    <button (click)="logOut()" class="nav-link btn btn-outline-info" routerLink="login"
-                        routerLinkActive="active">Logout</button>
+                <li *ngIf="isLogin" class="nav-item">
+                    <button (click)="logOut()" class="nav-link btn btn-outline-info p-1" routerLink="login"
+                        routerLinkActive="active"> Logout <i class='bx bx-log-in-circle p-1'></i></button>
                 </li>
                 <li class="nav-item mx-4">
                     <button *ngIf="!isLogin" class="nav-link btn btn-outline-info" routerLink="login"
-                        routerLinkActive="active">Login</button>
+                        routerLinkActive="active"> Login <i class='bx bxs-log-out-circle p-1' ></i></button>
                 </li>
             </ul>
         </div>
