@@ -44,4 +44,7 @@ export class ProductsService {
   updateProduct(id:any ,item:any):Observable<any>{
     return this._HttpClient.put(`https://dummyjson.com/products/${id}`, item).pipe(map(obj => obj))
   }
+  createNewCart(model:any):Observable<any>{
+    return this._HttpClient.post(`https://dummyjson.com/carts/add`, model)
+  }
 }

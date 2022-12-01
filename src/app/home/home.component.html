@@ -1,11 +1,12 @@
 <div class="container">
-    <h1 class="text-center my-5">Welcome To Our Store</h1>
-    <div class="header">
+    <h1 class="text-center text-info mt-5">Welcome To Our Store</h1>
+    <p class="text-center my-3">We allow you to shop all products</p>
+    <div class="header mt-5">
     </div>
 </div>
 
 <div class="container">
-    <h2 class="text-center my-5">Our Products</h2>
+    <h2 class="text-center my-5">Our Products</h2><hr class="text-info">
     <div class="row" *ngIf="!loading">
         <div *ngFor="let item of products" class="col-md-4 col-sm-12">
 

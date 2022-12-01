@@ -25,7 +25,7 @@
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     cursor: pointer;
-    background-color: rgba(48, 186, 231, 0.459);
+    background-color: rgb(3, 34, 44);
 }
 .item img{
     margin-top: 60px;

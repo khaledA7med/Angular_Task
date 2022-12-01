@@ -15,6 +15,7 @@ import { SelectComponent } from './select/select.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -30,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     NavComponent,
     SelectComponent,
     LoadingComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
